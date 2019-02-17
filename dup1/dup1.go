@@ -9,11 +9,11 @@ import (
 )
 
 func main() {
-	counts := make(map[string]int)
-	input := bufio.NewScanner(os.Stdin)
+	counts := make(map[string]int)  // Create an empty map: set of key/value
+	input := bufio.NewScanner(os.Stdin) // Read the lines and remove newline character from the end of the line
 	fmt.Println("--> Begin")
 	for input.Scan() {
-		counts[input.Text()]++
+		counts[input.Text()]++ // Increment value correspondif to key
 	}
 
 	// NOTE: ignoring potential errors from input.Err()
